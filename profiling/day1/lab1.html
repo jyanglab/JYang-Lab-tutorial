@@ -38,41 +38,37 @@
 div.sourceCode { overflow-x: auto; }
 table.sourceCode, tr.sourceCode, td.lineNumbers, td.sourceCode {
   margin: 0; padding: 0; vertical-align: baseline; border: none; }
-table.sourceCode { width: 100%; line-height: 100%; background-color: #ffffff; color: #1f1c1b; }
-td.lineNumbers { text-align: right; padding-right: 4px; padding-left: 4px; background-color: #ffffff; color: #a0a0a0; border-right: 1px solid #a0a0a0; }
+table.sourceCode { width: 100%; line-height: 100%; }
+td.lineNumbers { text-align: right; padding-right: 4px; padding-left: 4px; background-color: #dddddd; }
 td.sourceCode { padding-left: 5px; }
-pre, code { color: #1f1c1b; background-color: #ffffff; }
-code > span.kw { color: #1f1c1b; font-weight: bold; } /* Keyword */
-code > span.dt { color: #0057ae; } /* DataType */
-code > span.dv { color: #b08000; } /* DecVal */
-code > span.bn { color: #b08000; } /* BaseN */
-code > span.fl { color: #b08000; } /* Float */
-code > span.cn { color: #aa5500; } /* Constant */
-code > span.ch { color: #924c9d; } /* Char */
-code > span.sc { color: #3daee9; } /* SpecialChar */
-code > span.st { color: #bf0303; } /* String */
-code > span.vs { color: #bf0303; } /* VerbatimString */
-code > span.ss { color: #ff5500; } /* SpecialString */
-code > span.im { color: #ff5500; } /* Import */
-code > span.co { color: #898887; } /* Comment */
-code > span.do { color: #607880; } /* Documentation */
-code > span.an { color: #ca60ca; } /* Annotation */
-code > span.cv { color: #0095ff; } /* CommentVar */
-code > span.ot { color: #006e28; } /* Other */
-code > span.fu { color: #644a9b; } /* Function */
-code > span.va { color: #0057ae; } /* Variable */
-code > span.cf { color: #1f1c1b; font-weight: bold; } /* ControlFlow */
-code > span.op { color: #1f1c1b; } /* Operator */
-code > span.bu { color: #644a9b; font-weight: bold; } /* BuiltIn */
-code > span.ex { color: #0095ff; font-weight: bold; } /* Extension */
-code > span.pp { color: #006e28; } /* Preprocessor */
-code > span.at { color: #0057ae; } /* Attribute */
-code > span.re { color: #0057ae; } /* RegionMarker */
-code > span.in { color: #b08000; } /* Information */
-code > span.wa { color: #bf0303; } /* Warning */
-code > span.al { color: #bf0303; font-weight: bold; } /* Alert */
-code > span.er { color: #bf0303; text-decoration: underline; } /* Error */
-code > span. { color: #1f1c1b; } /* Normal */
+code > span.kw { font-weight: bold; } /* Keyword */
+code > span.dt { color: #800000; } /* DataType */
+code > span.dv { color: #0000ff; } /* DecVal */
+code > span.bn { color: #0000ff; } /* BaseN */
+code > span.fl { color: #800080; } /* Float */
+code > span.ch { color: #ff00ff; } /* Char */
+code > span.st { color: #dd0000; } /* String */
+code > span.co { color: #808080; font-style: italic; } /* Comment */
+code > span.al { color: #00ff00; font-weight: bold; } /* Alert */
+code > span.fu { color: #000080; } /* Function */
+code > span.er { color: #ff0000; font-weight: bold; } /* Error */
+code > span.wa { color: #ff0000; font-weight: bold; } /* Warning */
+code > span.cn { color: #000000; } /* Constant */
+code > span.sc { color: #ff00ff; } /* SpecialChar */
+code > span.vs { color: #dd0000; } /* VerbatimString */
+code > span.ss { color: #dd0000; } /* SpecialString */
+code > span.im { } /* Import */
+code > span.va { } /* Variable */
+code > span.cf { } /* ControlFlow */
+code > span.op { } /* Operator */
+code > span.bu { } /* BuiltIn */
+code > span.ex { } /* Extension */
+code > span.pp { font-weight: bold; } /* Preprocessor */
+code > span.at { } /* Attribute */
+code > span.do { color: #808080; font-style: italic; } /* Documentation */
+code > span.an { color: #808080; font-weight: bold; font-style: italic; } /* Annotation */
+code > span.cv { color: #808080; font-weight: bold; font-style: italic; } /* CommentVar */
+code > span.in { color: #808080; font-weight: bold; font-style: italic; } /* Information */
 </style>
 
 
@@ -128,7 +124,8 @@ $(document).ready(function () {
 <div id="basic-bash-commands" class="section level2">
 <h2>Basic bash commands</h2>
 <ul>
-<li><a href="https://medium.com/the-code-review/top-10-bash-file-system-commands-you-cant-live-without-4cd937bd7df1">Top 10 Bash file system commands</a></li>
+<li><p><a href="https://medium.com/the-code-review/top-10-bash-file-system-commands-you-cant-live-without-4cd937bd7df1">Top 10 Bash file system commands</a></p></li>
+<li><p><a href="https://unlhcc.github.io/2018-08-13-NU/">The Unix Shell</a></p></li>
 </ul>
 </div>
 <div id="some-of-my-little-tips" class="section level2">
@@ -138,72 +135,72 @@ $(document).ready(function () {
 <li>.bash_alias:</li>
 </ul>
 <div class="sourceCode"><pre class="sourceCode bash"><code class="sourceCode bash"><span class="co"># Linux aliases</span>
-<span class="bu">alias</span> mybin=<span class="st">&#39;ll ~/bin/mypackbin/&#39;</span>
-<span class="bu">alias</span> md=<span class="st">&#39;module load irods; module load R; module load python&#39;</span>
-<span class="bu">alias</span> ftoday=<span class="st">&#39;find -maxdepth 1 -type f -mtime -1&#39;</span> <span class="co"># Find today&#39;s file</span>
-<span class="bu">alias</span> R=<span class="st">&#39;module load R; R&#39;</span>
+<span class="kw">alias</span> mybin=<span class="st">&#39;ll ~/bin/mypackbin/&#39;</span>
+<span class="kw">alias</span> md=<span class="st">&#39;module load irods; module load R; module load python&#39;</span>
+<span class="kw">alias</span> ftoday=<span class="st">&#39;find -maxdepth 1 -type f -mtime -1&#39;</span> <span class="co"># Find today&#39;s file</span>
+<span class="kw">alias</span> R=<span class="st">&#39;module load R; R&#39;</span>
 <span class="co">#alias load=&#39;source ~/.bash_profile&#39;</span>
 
 <span class="co"># some aliases</span>
-<span class="bu">alias</span> ac=<span class="st">&#39;less ~/.ssh/config | grep Host&#39;</span>
-<span class="bu">alias</span> al=<span class="st">&#39;view ~/.bash_aliases&#39;</span>
-<span class="bu">alias</span> du1=<span class="st">&#39;du -h --max-depth=1 .&#39;</span>
+<span class="kw">alias</span> ac=<span class="st">&#39;less ~/.ssh/config | grep Host&#39;</span>
+<span class="kw">alias</span> al=<span class="st">&#39;view ~/.bash_aliases&#39;</span>
+<span class="kw">alias</span> du1=<span class="st">&#39;du -h --max-depth=1 .&#39;</span>
 
 <span class="co"># -----------------------</span>
 <span class="co"># HPC system alias</span>
 <span class="co"># ----------------------</span>
-<span class="bu">alias</span> ll=<span class="st">&#39;ls -lF -h&#39;</span>
-<span class="bu">alias</span> mysq=<span class="st">&#39;squeue --format=&quot;%.18i %.9A %.9P %.8j %.8u %.2t %.10M %.6D %R %.9m&quot;&#39;</span>
-<span class="bu">alias</span> srun1=<span class="st">&#39;srun --nodes=1 --mem 1024 --ntasks=1 --licenses=common --time=8:00:00 --pty bash&#39;</span>
-<span class="bu">alias</span> srun4=<span class="st">&#39;srun --nodes=1 --mem 4G --ntasks=4 --licenses=common --time=8:00:00 --pty bash&#39;</span>
-<span class="bu">alias</span> srunq4=<span class="st">&#39;srun --qos=short --nodes=1 --licenses=common --ntasks=4 --mem 32G --time 6:00:00 --pty bash&#39;</span>
-<span class="bu">alias</span> srunq1=<span class="st">&quot;srun --qos=short --nodes=1 --licenses=common --ntasks-per-node=1 --mem-per-cpu=1024 --time 6:00:00 --pty </span><span class="va">$SHELL</span><span class="st">&quot;</span>
-<span class="bu">alias</span> myjob=<span class="st">&#39;mysq | grep jyang21&#39;</span>
-<span class="bu">alias</span> mylab=<span class="st">&#39;mysq | egrep &quot;jyang21|raghu|xie186&quot;&#39;</span>
+<span class="kw">alias</span> ll=<span class="st">&#39;ls -lF -h&#39;</span>
+<span class="kw">alias</span> mysq=<span class="st">&#39;squeue --format=&quot;%.18i %.9A %.9P %.8j %.8u %.2t %.10M %.6D %R %.9m&quot;&#39;</span>
+<span class="kw">alias</span> srun1=<span class="st">&#39;srun --nodes=1 --mem 1024 --ntasks=1 --licenses=common --time=8:00:00 --pty bash&#39;</span>
+<span class="kw">alias</span> srun4=<span class="st">&#39;srun --nodes=1 --mem 4G --ntasks=4 --licenses=common --time=8:00:00 --pty bash&#39;</span>
+<span class="kw">alias</span> srunq4=<span class="st">&#39;srun --qos=short --nodes=1 --licenses=common --ntasks=4 --mem 32G --time 6:00:00 --pty bash&#39;</span>
+<span class="kw">alias</span> srunq1=<span class="st">&quot;srun --qos=short --nodes=1 --licenses=common --ntasks-per-node=1 --mem-per-cpu=1024 --time 6:00:00 --pty </span><span class="ot">$SHELL</span><span class="st">&quot;</span>
+<span class="kw">alias</span> myjob=<span class="st">&#39;mysq | grep jyang21&#39;</span>
+<span class="kw">alias</span> mylab=<span class="st">&#39;mysq | egrep &quot;jyang21|raghu|xie186&quot;&#39;</span>
 <span class="co"># Add an &quot;alert&quot; alias for long running commands.  Use like so:</span>
 <span class="co">#   sleep 10; alert</span>
-<span class="bu">alias</span> alert=<span class="st">&#39;notify-send --urgency=low -i &quot;$([ $? = 0 ] &amp;&amp; echo terminal || echo error)&quot; &quot;$(history|tail -n1|sed -e &#39;</span><span class="dt">\&#39;</span><span class="st">&#39;s/^\s*[0-9]\+\s*//;s/[;&amp;|]\s*alert$//&#39;</span><span class="dt">\&#39;</span><span class="st">&#39;)&quot;&#39;</span>
+<span class="kw">alias</span> alert=<span class="st">&#39;notify-send --urgency=low -i &quot;$([ $? = 0 ] &amp;&amp; echo terminal || echo error)&quot; &quot;$(history|tail -n1|sed -e &#39;</span><span class="dt">\&#39;</span><span class="st">&#39;s/^\s*[0-9]\+\s*//;s/[;&amp;|]\s*alert$//&#39;</span><span class="dt">\&#39;</span><span class="st">&#39;)&quot;&#39;</span>
 <span class="co">#</span>
-<span class="bu">alias</span> squeue=<span class="st">&#39;squeue --format=&quot;%.12i %.0P %.18j %.8u %.2t %.10M %.6D %R %C&quot;&#39;</span>
+<span class="kw">alias</span> squeue=<span class="st">&#39;squeue --format=&quot;%.12i %.0P %.18j %.8u %.2t %.10M %.6D %R %C&quot;&#39;</span>
 
 
 <span class="co">#   -----------------------------</span>
 <span class="co">#   2. MAKE TERMINAL BETTER</span>
 <span class="co">#   -----------------------------</span>
 
-<span class="bu">alias</span> tar=<span class="st">&#39;tar -zxvf&#39;</span>
-<span class="bu">alias</span> cp=<span class="st">&#39;cp -iv&#39;</span>                           # Preferred <span class="st">&#39;cp&#39;</span> implementation
-<span class="bu">alias</span> mv=<span class="st">&#39;mv -iv&#39;</span>                           # Preferred <span class="st">&#39;mv&#39;</span> implementation
-<span class="bu">alias</span> mkdir=<span class="st">&#39;mkdir -pv&#39;</span>                     # Preferred <span class="st">&#39;mkdir&#39;</span> implementation
-<span class="bu">alias</span> ll=<span class="st">&#39;ls -FGlAhp&#39;</span>                       # Preferred <span class="st">&#39;ls&#39;</span> implementation
+<span class="kw">alias</span> tar=<span class="st">&#39;tar -zxvf&#39;</span>
+<span class="kw">alias</span> cp=<span class="st">&#39;cp -iv&#39;</span>                           <span class="co"># Preferred &#39;cp&#39; implementation</span>
+<span class="kw">alias</span> mv=<span class="st">&#39;mv -iv&#39;</span>                           <span class="co"># Preferred &#39;mv&#39; implementation</span>
+<span class="kw">alias</span> mkdir=<span class="st">&#39;mkdir -pv&#39;</span>                     <span class="co"># Preferred &#39;mkdir&#39; implementation</span>
+<span class="kw">alias</span> ll=<span class="st">&#39;ls -FGlAhp&#39;</span>                       <span class="co"># Preferred &#39;ls&#39; implementation</span>
 <span class="co">#alias less=&#39;less -FSRXc&#39;                    # Preferred &#39;less&#39; implementation</span>
-<span class="fu">cd()</span> <span class="kw">{</span> <span class="bu">builtin</span> cd <span class="st">&quot;</span><span class="va">$@</span><span class="st">&quot;</span><span class="kw">;</span> <span class="ex">ll</span><span class="kw">;</span> <span class="kw">}</span>               # <span class="ex">Always</span> list directory contents upon <span class="st">&#39;cd&#39;</span>
-<span class="bu">alias</span> cd..=<span class="st">&#39;cd ../&#39;</span>                         # Go back 1 directory level (for fast typers)
-<span class="bu">alias</span> ..=<span class="st">&#39;cd ../&#39;</span>                           # Go back 1 directory level</code></pre></div>
+<span class="fu">cd()</span> <span class="kw">{</span> <span class="kw">builtin</span> cd <span class="st">&quot;</span><span class="ot">$@</span><span class="st">&quot;</span><span class="kw">;</span> <span class="kw">ll;</span> <span class="kw">}</span>               <span class="co"># Always list directory contents upon &#39;cd&#39;</span>
+<span class="kw">alias</span> cd..=<span class="st">&#39;cd ../&#39;</span>                         <span class="co"># Go back 1 directory level (for fast typers)</span>
+<span class="kw">alias</span> ..=<span class="st">&#39;cd ../&#39;</span>                           <span class="co"># Go back 1 directory level</span></code></pre></div>
 <div id="jump" class="section level3">
 <h3>Jump</h3>
-<div class="sourceCode"><pre class="sourceCode bash"><code class="sourceCode bash"><span class="bu">export</span> <span class="va">MARKPATH=$HOME</span>/.marks
+<div class="sourceCode"><pre class="sourceCode bash"><code class="sourceCode bash"><span class="kw">export</span> <span class="ot">MARKPATH=$HOME</span>/.marks
 <span class="kw">function</span><span class="fu"> jump</span> <span class="kw">{</span>
-    <span class="bu">cd</span> -P <span class="st">&quot;</span><span class="va">$MARKPATH</span><span class="st">/</span><span class="va">$1</span><span class="st">&quot;</span> <span class="op">2&gt;</span>/dev/null <span class="kw">||</span> <span class="bu">echo</span> <span class="st">&quot;No such mark: </span><span class="va">$1</span><span class="st">&quot;</span>
+    <span class="kw">cd</span> -P <span class="st">&quot;</span><span class="ot">$MARKPATH</span><span class="st">/</span><span class="ot">$1</span><span class="st">&quot;</span> <span class="kw">2&gt;</span>/dev/null <span class="kw">||</span> <span class="kw">echo</span> <span class="st">&quot;No such mark: </span><span class="ot">$1</span><span class="st">&quot;</span>
 <span class="kw">}</span>
 <span class="kw">function</span><span class="fu"> mark</span> <span class="kw">{</span>
-    <span class="fu">mkdir</span> -p <span class="st">&quot;</span><span class="va">$MARKPATH</span><span class="st">&quot;</span><span class="kw">;</span> <span class="fu">ln</span> -s <span class="st">&quot;</span><span class="va">$(</span><span class="bu">pwd</span><span class="va">)</span><span class="st">&quot;</span> <span class="st">&quot;</span><span class="va">$MARKPATH</span><span class="st">/</span><span class="va">$1</span><span class="st">&quot;</span>
+    <span class="kw">mkdir</span> -p <span class="st">&quot;</span><span class="ot">$MARKPATH</span><span class="st">&quot;</span><span class="kw">;</span> <span class="kw">ln</span> -s <span class="st">&quot;</span><span class="ot">$(</span><span class="kw">pwd</span><span class="ot">)</span><span class="st">&quot;</span> <span class="st">&quot;</span><span class="ot">$MARKPATH</span><span class="st">/</span><span class="ot">$1</span><span class="st">&quot;</span>
 <span class="kw">}</span>
 <span class="kw">function</span><span class="fu"> unmark</span> <span class="kw">{</span>
-    <span class="fu">rm</span> -i <span class="st">&quot;</span><span class="va">$MARKPATH</span><span class="st">/</span><span class="va">$1</span><span class="st">&quot;</span>
+    <span class="kw">rm</span> -i <span class="st">&quot;</span><span class="ot">$MARKPATH</span><span class="st">/</span><span class="ot">$1</span><span class="st">&quot;</span>
 <span class="kw">}</span>
 <span class="kw">function</span><span class="fu"> marks</span> <span class="kw">{</span>
-    <span class="fu">ls</span> -l <span class="st">&quot;</span><span class="va">$MARKPATH</span><span class="st">&quot;</span> <span class="kw">|</span> <span class="fu">sed</span> <span class="st">&#39;s/  / /g&#39;</span> <span class="kw">|</span> <span class="fu">cut</span> -d<span class="st">&#39; &#39;</span> -f9- <span class="kw">|</span> <span class="fu">sed</span> <span class="st">&#39;s/ -/\t-/g&#39;</span> <span class="kw">&amp;&amp;</span> <span class="bu">echo</span>
+    <span class="kw">ls</span> -l <span class="st">&quot;</span><span class="ot">$MARKPATH</span><span class="st">&quot;</span> <span class="kw">|</span> <span class="kw">sed</span> <span class="st">&#39;s/  / /g&#39;</span> <span class="kw">|</span> <span class="kw">cut</span> -d<span class="st">&#39; &#39;</span> -f9- <span class="kw">|</span> <span class="kw">sed</span> <span class="st">&#39;s/ -/\t-/g&#39;</span> <span class="kw">&amp;&amp;</span> <span class="kw">echo</span>
 <span class="kw">}</span>
 
 <span class="fu">_completemarks()</span> <span class="kw">{</span>
-  <span class="bu">local</span> <span class="va">curw=${COMP_WORDS[COMP_CWORD]}</span>
-  <span class="bu">local</span> <span class="va">wordlist=$(</span><span class="fu">find</span> <span class="va">$MARKPATH</span> -type l -printf <span class="st">&quot;%f\n&quot;</span><span class="va">)</span>
-  <span class="va">COMPREPLY=($(</span><span class="bu">compgen</span> -W <span class="st">&#39;${wordlist[@]}&#39;</span> -- <span class="st">&quot;</span><span class="va">$curw</span><span class="st">&quot;</span><span class="va">))</span>
-  <span class="bu">return</span> 0
+  <span class="kw">local</span> <span class="ot">curw=${COMP_WORDS[COMP_CWORD]}</span>
+  <span class="kw">local</span> <span class="ot">wordlist=$(</span><span class="kw">find</span> <span class="ot">$MARKPATH</span> -type l -printf <span class="st">&quot;%f\n&quot;</span><span class="ot">)</span>
+  <span class="ot">COMPREPLY=($(</span><span class="kw">compgen</span> -W <span class="st">&#39;${wordlist[@]}&#39;</span> -- <span class="st">&quot;</span><span class="ot">$curw</span><span class="st">&quot;</span><span class="ot">))</span>
+  <span class="kw">return</span> 0
 <span class="kw">}</span>
 
-<span class="bu">complete</span> -F _completemarks jump unmark</code></pre></div>
+<span class="kw">complete</span> -F _completemarks jump unmark</code></pre></div>
 </div>
 </div>
 <div id="about-hcc" class="section level2">
@@ -219,11 +216,11 @@ $(document).ready(function () {
 <div id="an-example-project" class="section level2">
 <h2>An example project:</h2>
 <p><a href="https://github.com/Raghuprakash/Ziegler_mineral_GWAS">Mineral GWAS</a></p>
-<div class="sourceCode"><pre class="sourceCode bash"><code class="sourceCode bash"><span class="fu">git</span> clone git@github.com:Raghuprakash/Ziegler_mineral_GWAS.git</code></pre></div>
+<div class="sourceCode"><pre class="sourceCode bash"><code class="sourceCode bash"><span class="kw">git</span> clone git@github.com:Raghuprakash/Ziegler_mineral_GWAS.git</code></pre></div>
 <div id="path-normalization" class="section level3">
 <h3>Path normalization:</h3>
-<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">knitr<span class="op">::</span>opts_chunk<span class="op">$</span><span class="kw">set</span>(<span class="dt">echo =</span> <span class="ot">TRUE</span>) 
-knitr<span class="op">::</span>opts_knit<span class="op">$</span><span class="kw">set</span>(<span class="dt">root.dir=</span><span class="kw">normalizePath</span>(<span class="st">&#39;../../&#39;</span>)) 
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">knitr::opts_chunk$<span class="kw">set</span>(<span class="dt">echo =</span> <span class="ot">TRUE</span>) 
+knitr::opts_knit$<span class="kw">set</span>(<span class="dt">root.dir=</span><span class="kw">normalizePath</span>(<span class="st">&#39;../../&#39;</span>)) 
 <span class="co">#library(tidyverse)</span></code></pre></div>
 </div>
 </div>
