@@ -1,0 +1,3 @@
+LIFE 891-002 Integrating Quantitative and Computational Biology into Life Sciences Research - Spring 2018
+
+- Tutorial 1
