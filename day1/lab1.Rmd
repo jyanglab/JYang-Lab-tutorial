@@ -1,7 +1,7 @@
 ---
-title: "GWAS"
-date: "February 19, 2018"
-author: "Gota Morota"
+title: "J. Yang Lab: T1"
+date: "August 22, 2018"
+author: "Jinliang Yang"
 output:
    rmdformats::material:
       highlight: kate

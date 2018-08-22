@@ -4,6 +4,4 @@
 # J. Yang Lab Tutorial/workshop page
 
 
-LIFE 891-002 Integrating Quantitative and Computational Biology into Life Sciences Research - Spring 2018
-
-- Tutorial 1
+- Tutorial 1: bash, github, and HCC [WWW]()
