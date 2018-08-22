@@ -6,3 +6,4 @@
 ## August 22, 2018
 - Tutorial 1: bash, github, and HCC [WWW](http://jyanglab.com/JYang-Lab-tutorial/profiling/day1/lab1.html)
 
+## August 27, 2018
