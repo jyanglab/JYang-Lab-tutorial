@@ -10,10 +10,10 @@ output:
 ---
 
 
-# Rice data
+# Bash
 Download the Rice Diversity Panel data `RiceDiversity.44K.MSU6.Genotypes_PLINK.zip` from [http://ricediversity.org/data/sets/44kgwas/](http://ricediversity.org/data/sets/44kgwas/). 
 
-## Genotype data
+## Github
 The genotype data set is provided in the PLINK format. We will use the `read_ped` function from the `BGLR` package to read the PLINK format files into the R environment. 
 ```{r eval=FALSE, echo=TRUE}
 # install.packages("BGLR")
