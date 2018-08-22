@@ -38,37 +38,41 @@
 div.sourceCode { overflow-x: auto; }
 table.sourceCode, tr.sourceCode, td.lineNumbers, td.sourceCode {
   margin: 0; padding: 0; vertical-align: baseline; border: none; }
-table.sourceCode { width: 100%; line-height: 100%; }
-td.lineNumbers { text-align: right; padding-right: 4px; padding-left: 4px; background-color: #dddddd; }
+table.sourceCode { width: 100%; line-height: 100%; background-color: #ffffff; color: #1f1c1b; }
+td.lineNumbers { text-align: right; padding-right: 4px; padding-left: 4px; background-color: #ffffff; color: #a0a0a0; border-right: 1px solid #a0a0a0; }
 td.sourceCode { padding-left: 5px; }
-code > span.kw { font-weight: bold; } /* Keyword */
-code > span.dt { color: #800000; } /* DataType */
-code > span.dv { color: #0000ff; } /* DecVal */
-code > span.bn { color: #0000ff; } /* BaseN */
-code > span.fl { color: #800080; } /* Float */
-code > span.ch { color: #ff00ff; } /* Char */
-code > span.st { color: #dd0000; } /* String */
-code > span.co { color: #808080; font-style: italic; } /* Comment */
-code > span.al { color: #00ff00; font-weight: bold; } /* Alert */
-code > span.fu { color: #000080; } /* Function */
-code > span.er { color: #ff0000; font-weight: bold; } /* Error */
-code > span.wa { color: #ff0000; font-weight: bold; } /* Warning */
-code > span.cn { color: #000000; } /* Constant */
-code > span.sc { color: #ff00ff; } /* SpecialChar */
-code > span.vs { color: #dd0000; } /* VerbatimString */
-code > span.ss { color: #dd0000; } /* SpecialString */
-code > span.im { } /* Import */
-code > span.va { } /* Variable */
-code > span.cf { } /* ControlFlow */
-code > span.op { } /* Operator */
-code > span.bu { } /* BuiltIn */
-code > span.ex { } /* Extension */
-code > span.pp { font-weight: bold; } /* Preprocessor */
-code > span.at { } /* Attribute */
-code > span.do { color: #808080; font-style: italic; } /* Documentation */
-code > span.an { color: #808080; font-weight: bold; font-style: italic; } /* Annotation */
-code > span.cv { color: #808080; font-weight: bold; font-style: italic; } /* CommentVar */
-code > span.in { color: #808080; font-weight: bold; font-style: italic; } /* Information */
+pre, code { color: #1f1c1b; background-color: #ffffff; }
+code > span.kw { color: #1f1c1b; font-weight: bold; } /* Keyword */
+code > span.dt { color: #0057ae; } /* DataType */
+code > span.dv { color: #b08000; } /* DecVal */
+code > span.bn { color: #b08000; } /* BaseN */
+code > span.fl { color: #b08000; } /* Float */
+code > span.cn { color: #aa5500; } /* Constant */
+code > span.ch { color: #924c9d; } /* Char */
+code > span.sc { color: #3daee9; } /* SpecialChar */
+code > span.st { color: #bf0303; } /* String */
+code > span.vs { color: #bf0303; } /* VerbatimString */
+code > span.ss { color: #ff5500; } /* SpecialString */
+code > span.im { color: #ff5500; } /* Import */
+code > span.co { color: #898887; } /* Comment */
+code > span.do { color: #607880; } /* Documentation */
+code > span.an { color: #ca60ca; } /* Annotation */
+code > span.cv { color: #0095ff; } /* CommentVar */
+code > span.ot { color: #006e28; } /* Other */
+code > span.fu { color: #644a9b; } /* Function */
+code > span.va { color: #0057ae; } /* Variable */
+code > span.cf { color: #1f1c1b; font-weight: bold; } /* ControlFlow */
+code > span.op { color: #1f1c1b; } /* Operator */
+code > span.bu { color: #644a9b; font-weight: bold; } /* BuiltIn */
+code > span.ex { color: #0095ff; font-weight: bold; } /* Extension */
+code > span.pp { color: #006e28; } /* Preprocessor */
+code > span.at { color: #0057ae; } /* Attribute */
+code > span.re { color: #0057ae; } /* RegionMarker */
+code > span.in { color: #b08000; } /* Information */
+code > span.wa { color: #bf0303; } /* Warning */
+code > span.al { color: #bf0303; font-weight: bold; } /* Alert */
+code > span.er { color: #bf0303; text-decoration: underline; } /* Error */
+code > span. { color: #1f1c1b; } /* Normal */
 </style>
 
 
@@ -109,10 +113,8 @@ $(document).ready(function () {
     <div class="row">
       <nav class="col-xs-3 menu" id="toc">
         <ul>
-        <li><a href="#bash">Bash</a></li>
-        <li><a href="#population-structure">Population structure</a></li>
-        <li><a href="#quality-control">Quality control</a></li>
-        <li><a href="#genome-wide-association-studies">Genome-wide association studies</a></li>
+        <li><a href="#bash-and-hcc">Bash and HCC</a></li>
+        <li><a href="#github">Github</a></li>
         </ul>
       </nav>
      <div class="pages col-xs-9">
@@ -121,112 +123,109 @@ $(document).ready(function () {
 
 
 
-<div id="bash" class="section level1">
-<h1>Bash</h1>
-<p>Download the Rice Diversity Panel data <code>RiceDiversity.44K.MSU6.Genotypes_PLINK.zip</code> from <a href="http://ricediversity.org/data/sets/44kgwas/" class="uri">http://ricediversity.org/data/sets/44kgwas/</a>.</p>
-<div id="github" class="section level2">
-<h2>Github</h2>
-<p>The genotype data set is provided in the PLINK format. We will use the <code>read_ped</code> function from the <code>BGLR</code> package to read the PLINK format files into the R environment.</p>
-<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="co"># install.packages(&quot;BGLR&quot;)</span>
-<span class="kw">library</span>(BGLR)
-out&lt;-<span class="st"> </span><span class="kw">read_ped</span>(<span class="st">&quot;../../STAT892/data/Genotypes/sativas413.ped&quot;</span>)
-p=out$p
-n=out$n
-out=out$x
-<span class="co">#Recode snp to 0,1,2 format using allele 1</span>
-<span class="co"># 0 --&gt; 0</span>
-<span class="co"># 1 --&gt; 1</span>
-<span class="co"># 2 --&gt; NA</span>
-<span class="co"># 3 --&gt; 2</span>
-out[out==<span class="dv">2</span>]=<span class="ot">NA</span>
-out[out==<span class="dv">3</span>]=<span class="dv">2</span>
-W &lt;-<span class="st"> </span><span class="kw">matrix</span>(out, <span class="dt">nrow=</span>p, <span class="dt">ncol=</span>n, <span class="dt">byrow=</span><span class="ot">TRUE</span>)
-W &lt;-<span class="st"> </span><span class="kw">t</span>(W) 
-<span class="kw">dim</span>(W) <span class="co"># # 413 x 36901</span></code></pre></div>
+<div id="bash-and-hcc" class="section level1">
+<h1>Bash and HCC</h1>
+<div id="basic-bash-commands" class="section level2">
+<h2>Basic bash commands</h2>
+<ul>
+<li><a href="https://medium.com/the-code-review/top-10-bash-file-system-commands-you-cant-live-without-4cd937bd7df1">Top 10 Bash file system commands</a></li>
+</ul>
 </div>
-<div id="accession-ids" class="section level2">
-<h2>Accession IDs</h2>
-<p>The accession IDs (individual IDs) are included in <code>.fam</code> file.</p>
-<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="co"># accession ID</span>
-fam &lt;-<span class="kw">read.table</span>(<span class="st">&quot;../../STAT892/data/Genotypes/sativas413.fam&quot;</span>, <span class="dt">header =</span> <span class="ot">FALSE</span>, <span class="dt">stringsAsFactors =</span> <span class="ot">FALSE</span>)  
-<span class="kw">head</span>(fam)
-<span class="kw">rownames</span>(W) &lt;-<span class="st"> </span>fam$V2 <span class="co"># 413 x 36901</span></code></pre></div>
-</div>
-<div id="phenotype-data" class="section level2">
-<h2>Phenotype data</h2>
-<p>We will use the <code>read.table</code> function to read the phenotype file <code>RiceDiversity_44K_Phenotypes_34traits_PLINK.txt</code> from <a href="http://www.ricediversity.org/data/sets/44kgwas/RiceDiversity_44K_Phenotypes_34traits_PLINK.txt">here</a>.</p>
-<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="co"># phenotypes</span>
-rice.pheno &lt;-<span class="st"> </span><span class="kw">read.table</span>(<span class="st">&quot;http://www.ricediversity.org/data/sets/44kgwas/RiceDiversity_44K_Phenotypes_34traits_PLINK.txt&quot;</span>, <span class="dt">header=</span><span class="ot">TRUE</span>, <span class="dt">stringsAsFactors =</span> <span class="ot">FALSE</span>, <span class="dt">sep =</span> <span class="st">&quot;</span><span class="ch">\t</span><span class="st">&quot;</span>)
-<span class="kw">table</span>(<span class="kw">rownames</span>(W) ==<span class="st"> </span>rice.pheno$NSFTVID)
-y &lt;-<span class="st"> </span><span class="kw">matrix</span>(rice.pheno$Flowering.time.at.Arkansas) <span class="co"># # use the first trait </span>
-<span class="kw">rownames</span>(y) &lt;-<span class="st"> </span>rice.pheno$NSFTVID
-index &lt;-<span class="st"> </span>!<span class="kw">is.na</span>(y)
-y &lt;-<span class="st"> </span>y[index, <span class="dv">1</span>, drop=<span class="ot">FALSE</span>] <span class="co"># 374</span>
-W &lt;-<span class="st"> </span>W[index, ] <span class="co"># 374 x 36901</span>
-<span class="kw">table</span>(<span class="kw">rownames</span>(W) ==<span class="st"> </span><span class="kw">rownames</span>(y))</code></pre></div>
-</div>
-</div>
-<div id="population-structure" class="section level1">
-<h1>Population structure</h1>
-<p>This data set is known to exhibit a subpopulation structure as the panel contains indica, aus, temperate japonica, tropical japonica, aromatic, and highly admixed accessions. We will create a PC plot to visualize the extent of population structure in rice.</p>
-<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="co"># PC plots</span>
-gp &lt;-<span class="kw">read.csv</span>(<span class="st">&quot;http://ricediversity.org/data/sets/44kgwas/RiceDiversity.44K.germplasm.csv&quot;</span>, <span class="dt">header =</span> <span class="ot">TRUE</span>, <span class="dt">skip =</span> <span class="dv">1</span>,  <span class="dt">stringsAsFactors =</span> <span class="ot">FALSE</span>)   <span class="co"># 431 x 12</span>
-gp2 &lt;-<span class="st"> </span>gp[<span class="kw">match</span>(<span class="kw">rownames</span>(y), gp$NSFTV.ID), ]
-<span class="kw">table</span>(<span class="kw">rownames</span>(y) ==<span class="st"> </span>gp2$NSFTV.ID)
+<div id="some-of-my-little-tips" class="section level2">
+<h2>some of my little tips</h2>
+<p><code>.bash_profile</code>, <code>.bash_alias</code>, <code>.bashrc</code></p>
+<ul>
+<li>.bash_alias:</li>
+</ul>
+<div class="sourceCode"><pre class="sourceCode bash"><code class="sourceCode bash"><span class="co"># Linux aliases</span>
+<span class="bu">alias</span> mybin=<span class="st">&#39;ll ~/bin/mypackbin/&#39;</span>
+<span class="bu">alias</span> md=<span class="st">&#39;module load irods; module load R; module load python&#39;</span>
+<span class="bu">alias</span> ftoday=<span class="st">&#39;find -maxdepth 1 -type f -mtime -1&#39;</span> <span class="co"># Find today&#39;s file</span>
+<span class="bu">alias</span> R=<span class="st">&#39;module load R; R&#39;</span>
+<span class="co">#alias load=&#39;source ~/.bash_profile&#39;</span>
 
-    
-<span class="kw">plot</span>(gp2$PC1, gp2$PC2, <span class="dt">xlab=</span><span class="st">&quot;PC1&quot;</span>, <span class="dt">ylab=</span><span class="st">&quot;PC2&quot;</span>, <span class="dt">col=</span><span class="kw">c</span>(<span class="dv">1</span>:<span class="dv">6</span>)[<span class="kw">factor</span>(gp2$Sub.population)])
-<span class="kw">legend</span>(<span class="dt">x=</span><span class="st">&quot;topleft&quot;</span>, <span class="dt">legend =</span> <span class="kw">levels</span>(<span class="kw">factor</span>(gp2$Sub.population)), <span class="dt">col=</span><span class="kw">c</span>(<span class="dv">1</span>:<span class="dv">6</span>), <span class="dt">pch=</span><span class="dv">1</span>, <span class="dt">cex=</span><span class="fl">0.6</span>)</code></pre></div>
-</div>
-<div id="quality-control" class="section level1">
-<h1>Quality control</h1>
-<div id="genotype-imputation" class="section level2">
-<h2>Genotype imputation</h2>
-<p>Replace missing marker genotypes with mean values. Then store the marker genotypes in a matrix object <code>W</code>.</p>
-<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">for (j in <span class="dv">1</span>:<span class="kw">ncol</span>(W)){
-  W[,j] &lt;-<span class="st"> </span><span class="kw">ifelse</span>(<span class="kw">is.na</span>(W[,j]), <span class="kw">mean</span>(W[,j], <span class="dt">na.rm=</span><span class="ot">TRUE</span>), W[,j])
-}</code></pre></div>
-</div>
-<div id="compute-allele-frequencies-for-all-snps" class="section level2">
-<h2>Compute allele frequencies for all SNPs</h2>
-<p>Recall that allele frequency of <em>A</em> is given by <span class="math display">\[ 
-f(A) = p = \frac{2 \times (\text{no. of } AA \text{ individuals}) + 1 \times (\text{no. of } Aa \text{ individuals})}{2 \times \text{total no. of individuals}}.
-\]</span> We can rewrite this equation into <span class="math display">\[ 
-f(A) = p = \frac{(\text{no. of } A \text{ allele in the population})}{2 \times \text{total no. of individuals}}.
-\]</span> This suggests that all we need is the number of <span class="math inline">\(A\)</span> allele or reference allele <span class="math inline">\(a\)</span> for each SNP. The <code>sum</code> function returns the number of reference allele <span class="math inline">\(A\)</span>.</p>
-<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">sum</span>(W[,<span class="dv">1</span>]) <span class="co"># sum of A allele in the first SNP</span>
-<span class="kw">sum</span>(W[,<span class="dv">2</span>]) <span class="co"># sum of A allele in the second SNP</span></code></pre></div>
-<p>How to repeat this operation for 3,6901 SNPs? The <code>colSums</code> function returns the sum of each column in a matrix as a vector.</p>
-<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">colSums</span>(W) </code></pre></div>
-<p>Note that <code>colSums(W)</code> gives the numerator of the above equation. We then divide this number by <span class="math inline">\(2 \times \text{total no. of individuals}\)</span>. The function <code>nrows</code> returns the number of rows.</p>
-<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">p &lt;-<span class="st"> </span><span class="kw">colSums</span>(W) /<span class="st"> </span>(<span class="dv">2</span> *<span class="st"> </span><span class="kw">nrow</span>(W)) <span class="co"># or colMean(X) / 2</span></code></pre></div>
-<p>The variable <code>p</code> is a vector and it contains the allele frequencies of reference allele.</p>
-</div>
-<div id="minor-allele-frequency-maf" class="section level2">
-<h2>Minor allele frequency (MAF)</h2>
-<p>Perform a quality control analysis by removing markers with MAF &lt; 0.05. How many markers are removed? Save the filtered genotype matrix in <code>W2</code>.</p>
-<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">maf &lt;-<span class="st"> </span><span class="kw">ifelse</span>(p &gt;<span class="st"> </span><span class="fl">0.5</span>, <span class="dv">1</span>-p, p)
-maf.index &lt;-<span class="st"> </span><span class="kw">which</span>(maf &lt;<span class="st"> </span><span class="fl">0.05</span>)
-W2 &lt;-<span class="st"> </span>W[, -maf.index]  <span class="co"># 374 x 33558 </span></code></pre></div>
-</div>
-</div>
-<div id="genome-wide-association-studies" class="section level1">
-<h1>Genome-wide association studies</h1>
-<p>Fit a single-marker-based linear mixed model by using the <code>GWAS</code> function in the <a href="https://cran.r-project.org/web/packages/rrBLUP/index.html">rrBLUP</a> R package. Report the -log10 of p-values for SNP effects.</p>
-<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="co"># install.packages(&quot;rrBLUP&quot;)</span>
-<span class="kw">library</span>(rrBLUP)
-map &lt;-<span class="st"> </span><span class="kw">read.table</span>(<span class="st">&quot;../../STAT892/data/Genotypes/sativas413.map&quot;</span>, <span class="dt">header =</span> <span class="ot">FALSE</span>, <span class="dt">stringsAsFactors =</span> <span class="ot">FALSE</span>)
-my.geno &lt;-<span class="st"> </span><span class="kw">data.frame</span>(<span class="dt">marker=</span>map[,<span class="dv">2</span>], <span class="dt">chrom=</span>map[,<span class="dv">1</span>], <span class="dt">pos=</span>map[,<span class="dv">4</span>], <span class="kw">t</span>(W<span class="dv">-1</span>), <span class="dt">check.names =</span> <span class="ot">FALSE</span>) <span class="co"># W = \in{-1, 0, 1}</span>
-my.pheno &lt;-<span class="st"> </span><span class="kw">data.frame</span>(<span class="dt">NSFTV_ID=</span><span class="kw">rownames</span>(y), <span class="dt">y=</span>y) 
+<span class="co"># some aliases</span>
+<span class="bu">alias</span> ac=<span class="st">&#39;less ~/.ssh/config | grep Host&#39;</span>
+<span class="bu">alias</span> al=<span class="st">&#39;view ~/.bash_aliases&#39;</span>
+<span class="bu">alias</span> du1=<span class="st">&#39;du -h --max-depth=1 .&#39;</span>
 
-rel &lt;-<span class="st"> </span><span class="kw">GWAS</span>(my.pheno, my.geno, <span class="dt">min.MAF=</span><span class="fl">0.05</span>, <span class="dt">P3D=</span><span class="ot">TRUE</span>, <span class="dt">plot=</span><span class="ot">FALSE</span>)
-<span class="kw">head</span>(rel$y)
-<span class="kw">tail</span>(rel$y)</code></pre></div>
-<div id="manhattan-plot" class="section level2">
-<h2>Manhattan plot</h2>
-<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="co"># install.packages(&quot;qqman&quot;)</span>
-<span class="kw">library</span>(qqman)
-<span class="kw">manhattan</span>(<span class="dt">x =</span> rel, <span class="dt">chr =</span> <span class="st">&quot;chrom&quot;</span>, <span class="dt">bp =</span> <span class="st">&quot;pos&quot;</span>, <span class="dt">p =</span> <span class="st">&quot;y&quot;</span>, <span class="dt">snp =</span> <span class="st">&quot;marker&quot;</span>, <span class="dt">col =</span> <span class="kw">c</span>(<span class="st">&quot;blue4&quot;</span>, <span class="st">&quot;orange3&quot;</span>), <span class="dt">logp =</span> <span class="ot">FALSE</span>)</code></pre></div>
+<span class="co"># -----------------------</span>
+<span class="co"># HPC system alias</span>
+<span class="co"># ----------------------</span>
+<span class="bu">alias</span> ll=<span class="st">&#39;ls -lF -h&#39;</span>
+<span class="bu">alias</span> mysq=<span class="st">&#39;squeue --format=&quot;%.18i %.9A %.9P %.8j %.8u %.2t %.10M %.6D %R %.9m&quot;&#39;</span>
+<span class="bu">alias</span> srun1=<span class="st">&#39;srun --nodes=1 --mem 1024 --ntasks=1 --licenses=common --time=8:00:00 --pty bash&#39;</span>
+<span class="bu">alias</span> srun4=<span class="st">&#39;srun --nodes=1 --mem 4G --ntasks=4 --licenses=common --time=8:00:00 --pty bash&#39;</span>
+<span class="bu">alias</span> srunq4=<span class="st">&#39;srun --qos=short --nodes=1 --licenses=common --ntasks=4 --mem 32G --time 6:00:00 --pty bash&#39;</span>
+<span class="bu">alias</span> srunq1=<span class="st">&quot;srun --qos=short --nodes=1 --licenses=common --ntasks-per-node=1 --mem-per-cpu=1024 --time 6:00:00 --pty </span><span class="va">$SHELL</span><span class="st">&quot;</span>
+<span class="bu">alias</span> myjob=<span class="st">&#39;mysq | grep jyang21&#39;</span>
+<span class="bu">alias</span> mylab=<span class="st">&#39;mysq | egrep &quot;jyang21|raghu|xie186&quot;&#39;</span>
+<span class="co"># Add an &quot;alert&quot; alias for long running commands.  Use like so:</span>
+<span class="co">#   sleep 10; alert</span>
+<span class="bu">alias</span> alert=<span class="st">&#39;notify-send --urgency=low -i &quot;$([ $? = 0 ] &amp;&amp; echo terminal || echo error)&quot; &quot;$(history|tail -n1|sed -e &#39;</span><span class="dt">\&#39;</span><span class="st">&#39;s/^\s*[0-9]\+\s*//;s/[;&amp;|]\s*alert$//&#39;</span><span class="dt">\&#39;</span><span class="st">&#39;)&quot;&#39;</span>
+<span class="co">#</span>
+<span class="bu">alias</span> squeue=<span class="st">&#39;squeue --format=&quot;%.12i %.0P %.18j %.8u %.2t %.10M %.6D %R %C&quot;&#39;</span>
+
+
+<span class="co">#   -----------------------------</span>
+<span class="co">#   2. MAKE TERMINAL BETTER</span>
+<span class="co">#   -----------------------------</span>
+
+<span class="bu">alias</span> tar=<span class="st">&#39;tar -zxvf&#39;</span>
+<span class="bu">alias</span> cp=<span class="st">&#39;cp -iv&#39;</span>                           # Preferred <span class="st">&#39;cp&#39;</span> implementation
+<span class="bu">alias</span> mv=<span class="st">&#39;mv -iv&#39;</span>                           # Preferred <span class="st">&#39;mv&#39;</span> implementation
+<span class="bu">alias</span> mkdir=<span class="st">&#39;mkdir -pv&#39;</span>                     # Preferred <span class="st">&#39;mkdir&#39;</span> implementation
+<span class="bu">alias</span> ll=<span class="st">&#39;ls -FGlAhp&#39;</span>                       # Preferred <span class="st">&#39;ls&#39;</span> implementation
+<span class="co">#alias less=&#39;less -FSRXc&#39;                    # Preferred &#39;less&#39; implementation</span>
+<span class="fu">cd()</span> <span class="kw">{</span> <span class="bu">builtin</span> cd <span class="st">&quot;</span><span class="va">$@</span><span class="st">&quot;</span><span class="kw">;</span> <span class="ex">ll</span><span class="kw">;</span> <span class="kw">}</span>               # <span class="ex">Always</span> list directory contents upon <span class="st">&#39;cd&#39;</span>
+<span class="bu">alias</span> cd..=<span class="st">&#39;cd ../&#39;</span>                         # Go back 1 directory level (for fast typers)
+<span class="bu">alias</span> ..=<span class="st">&#39;cd ../&#39;</span>                           # Go back 1 directory level</code></pre></div>
+<div id="jump" class="section level3">
+<h3>Jump</h3>
+<div class="sourceCode"><pre class="sourceCode bash"><code class="sourceCode bash"><span class="bu">export</span> <span class="va">MARKPATH=$HOME</span>/.marks
+<span class="kw">function</span><span class="fu"> jump</span> <span class="kw">{</span>
+    <span class="bu">cd</span> -P <span class="st">&quot;</span><span class="va">$MARKPATH</span><span class="st">/</span><span class="va">$1</span><span class="st">&quot;</span> <span class="op">2&gt;</span>/dev/null <span class="kw">||</span> <span class="bu">echo</span> <span class="st">&quot;No such mark: </span><span class="va">$1</span><span class="st">&quot;</span>
+<span class="kw">}</span>
+<span class="kw">function</span><span class="fu"> mark</span> <span class="kw">{</span>
+    <span class="fu">mkdir</span> -p <span class="st">&quot;</span><span class="va">$MARKPATH</span><span class="st">&quot;</span><span class="kw">;</span> <span class="fu">ln</span> -s <span class="st">&quot;</span><span class="va">$(</span><span class="bu">pwd</span><span class="va">)</span><span class="st">&quot;</span> <span class="st">&quot;</span><span class="va">$MARKPATH</span><span class="st">/</span><span class="va">$1</span><span class="st">&quot;</span>
+<span class="kw">}</span>
+<span class="kw">function</span><span class="fu"> unmark</span> <span class="kw">{</span>
+    <span class="fu">rm</span> -i <span class="st">&quot;</span><span class="va">$MARKPATH</span><span class="st">/</span><span class="va">$1</span><span class="st">&quot;</span>
+<span class="kw">}</span>
+<span class="kw">function</span><span class="fu"> marks</span> <span class="kw">{</span>
+    <span class="fu">ls</span> -l <span class="st">&quot;</span><span class="va">$MARKPATH</span><span class="st">&quot;</span> <span class="kw">|</span> <span class="fu">sed</span> <span class="st">&#39;s/  / /g&#39;</span> <span class="kw">|</span> <span class="fu">cut</span> -d<span class="st">&#39; &#39;</span> -f9- <span class="kw">|</span> <span class="fu">sed</span> <span class="st">&#39;s/ -/\t-/g&#39;</span> <span class="kw">&amp;&amp;</span> <span class="bu">echo</span>
+<span class="kw">}</span>
+
+<span class="fu">_completemarks()</span> <span class="kw">{</span>
+  <span class="bu">local</span> <span class="va">curw=${COMP_WORDS[COMP_CWORD]}</span>
+  <span class="bu">local</span> <span class="va">wordlist=$(</span><span class="fu">find</span> <span class="va">$MARKPATH</span> -type l -printf <span class="st">&quot;%f\n&quot;</span><span class="va">)</span>
+  <span class="va">COMPREPLY=($(</span><span class="bu">compgen</span> -W <span class="st">&#39;${wordlist[@]}&#39;</span> -- <span class="st">&quot;</span><span class="va">$curw</span><span class="st">&quot;</span><span class="va">))</span>
+  <span class="bu">return</span> 0
+<span class="kw">}</span>
+
+<span class="bu">complete</span> -F _completemarks jump unmark</code></pre></div>
+</div>
+</div>
+<div id="about-hcc" class="section level2">
+<h2>About <a href="https://hcc-docs.unl.edu/display/HCCDOC/HCC+Documentation">HCC</a></h2>
+<ul>
+<li>head node and compute node</li>
+<li>file systems: <code>/home</code>, <code>/work</code>, and <code>common</code></li>
+</ul>
+</div>
+</div>
+<div id="github" class="section level1">
+<h1>Github</h1>
+<div id="an-example-project" class="section level2">
+<h2>An example project:</h2>
+<p><a href="https://github.com/Raghuprakash/Ziegler_mineral_GWAS">Mineral GWAS</a></p>
+<div class="sourceCode"><pre class="sourceCode bash"><code class="sourceCode bash"><span class="fu">git</span> clone git@github.com:Raghuprakash/Ziegler_mineral_GWAS.git</code></pre></div>
+<div id="path-normalization" class="section level3">
+<h3>Path normalization:</h3>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">knitr<span class="op">::</span>opts_chunk<span class="op">$</span><span class="kw">set</span>(<span class="dt">echo =</span> <span class="ot">TRUE</span>) 
+knitr<span class="op">::</span>opts_knit<span class="op">$</span><span class="kw">set</span>(<span class="dt">root.dir=</span><span class="kw">normalizePath</span>(<span class="st">&#39;../../&#39;</span>)) 
+<span class="co">#library(tidyverse)</span></code></pre></div>
+</div>
 </div>
 </div>
 
