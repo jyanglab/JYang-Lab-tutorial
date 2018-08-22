@@ -1,1 +1,5 @@
 theme: jekyll-theme-minimal
+title: J. Yang Lab
+logo: "https://i.imgur.com/wFIJr3m.jpg"
+description: This is an internal lab workshop page.
+show_downloads: false
