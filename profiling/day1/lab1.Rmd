@@ -15,6 +15,7 @@ output:
 ## Basic bash commands
 - [Top 10 Bash file system commands](https://medium.com/the-code-review/top-10-bash-file-system-commands-you-cant-live-without-4cd937bd7df1)
 
+- [The Unix Shell](https://unlhcc.github.io/2018-08-13-NU/)
 
 ## some of my little tips
 
