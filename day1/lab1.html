@@ -8,11 +8,11 @@
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 <meta name="generator" content="pandoc" />
 
-<meta name="author" content="Gota Morota" />
+<meta name="author" content="Jinliang Yang" />
 
-<meta name="date" content="2018-02-19" />
+<meta name="date" content="2018-08-22" />
 
-<title>GWAS</title>
+<title>J. Yang Lab: T1</title>
 <!-- Material Design fonts -->
 <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700">
 <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/icon?family=Material+Icons">
@@ -38,41 +38,37 @@
 div.sourceCode { overflow-x: auto; }
 table.sourceCode, tr.sourceCode, td.lineNumbers, td.sourceCode {
   margin: 0; padding: 0; vertical-align: baseline; border: none; }
-table.sourceCode { width: 100%; line-height: 100%; background-color: #ffffff; color: #1f1c1b; }
-td.lineNumbers { text-align: right; padding-right: 4px; padding-left: 4px; background-color: #ffffff; color: #a0a0a0; border-right: 1px solid #a0a0a0; }
+table.sourceCode { width: 100%; line-height: 100%; }
+td.lineNumbers { text-align: right; padding-right: 4px; padding-left: 4px; background-color: #dddddd; }
 td.sourceCode { padding-left: 5px; }
-pre, code { color: #1f1c1b; background-color: #ffffff; }
-code > span.kw { color: #1f1c1b; font-weight: bold; } /* Keyword */
-code > span.dt { color: #0057ae; } /* DataType */
-code > span.dv { color: #b08000; } /* DecVal */
-code > span.bn { color: #b08000; } /* BaseN */
-code > span.fl { color: #b08000; } /* Float */
-code > span.cn { color: #aa5500; } /* Constant */
-code > span.ch { color: #924c9d; } /* Char */
-code > span.sc { color: #3daee9; } /* SpecialChar */
-code > span.st { color: #bf0303; } /* String */
-code > span.vs { color: #bf0303; } /* VerbatimString */
-code > span.ss { color: #ff5500; } /* SpecialString */
-code > span.im { color: #ff5500; } /* Import */
-code > span.co { color: #898887; } /* Comment */
-code > span.do { color: #607880; } /* Documentation */
-code > span.an { color: #ca60ca; } /* Annotation */
-code > span.cv { color: #0095ff; } /* CommentVar */
-code > span.ot { color: #006e28; } /* Other */
-code > span.fu { color: #644a9b; } /* Function */
-code > span.va { color: #0057ae; } /* Variable */
-code > span.cf { color: #1f1c1b; font-weight: bold; } /* ControlFlow */
-code > span.op { color: #1f1c1b; } /* Operator */
-code > span.bu { color: #644a9b; font-weight: bold; } /* BuiltIn */
-code > span.ex { color: #0095ff; font-weight: bold; } /* Extension */
-code > span.pp { color: #006e28; } /* Preprocessor */
-code > span.at { color: #0057ae; } /* Attribute */
-code > span.re { color: #0057ae; } /* RegionMarker */
-code > span.in { color: #b08000; } /* Information */
-code > span.wa { color: #bf0303; } /* Warning */
-code > span.al { color: #bf0303; font-weight: bold; } /* Alert */
-code > span.er { color: #bf0303; text-decoration: underline; } /* Error */
-code > span. { color: #1f1c1b; } /* Normal */
+code > span.kw { font-weight: bold; } /* Keyword */
+code > span.dt { color: #800000; } /* DataType */
+code > span.dv { color: #0000ff; } /* DecVal */
+code > span.bn { color: #0000ff; } /* BaseN */
+code > span.fl { color: #800080; } /* Float */
+code > span.ch { color: #ff00ff; } /* Char */
+code > span.st { color: #dd0000; } /* String */
+code > span.co { color: #808080; font-style: italic; } /* Comment */
+code > span.al { color: #00ff00; font-weight: bold; } /* Alert */
+code > span.fu { color: #000080; } /* Function */
+code > span.er { color: #ff0000; font-weight: bold; } /* Error */
+code > span.wa { color: #ff0000; font-weight: bold; } /* Warning */
+code > span.cn { color: #000000; } /* Constant */
+code > span.sc { color: #ff00ff; } /* SpecialChar */
+code > span.vs { color: #dd0000; } /* VerbatimString */
+code > span.ss { color: #dd0000; } /* SpecialString */
+code > span.im { } /* Import */
+code > span.va { } /* Variable */
+code > span.cf { } /* ControlFlow */
+code > span.op { } /* Operator */
+code > span.bu { } /* BuiltIn */
+code > span.ex { } /* Extension */
+code > span.pp { font-weight: bold; } /* Preprocessor */
+code > span.at { } /* Attribute */
+code > span.do { color: #808080; font-style: italic; } /* Documentation */
+code > span.an { color: #808080; font-weight: bold; font-style: italic; } /* Annotation */
+code > span.cv { color: #808080; font-weight: bold; font-style: italic; } /* CommentVar */
+code > span.in { color: #808080; font-weight: bold; font-style: italic; } /* Information */
 </style>
 
 
@@ -99,9 +95,9 @@ $(document).ready(function () {
         <div class="row">
             <div class="col-xs-3">
         <div id="header">
-    <h1 class="title">GWAS</h1>
-                <h4 class="author"><em>Gota Morota</em></h4>
-                <h4 class="date"><em>February 19, 2018</em></h4>
+    <h1 class="title">J. Yang Lab: T1</h1>
+                <h4 class="author"><em>Jinliang Yang</em></h4>
+                <h4 class="date"><em>August 22, 2018</em></h4>
         </div>
     </div>
 </div>
@@ -134,16 +130,16 @@ $(document).ready(function () {
 <div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="co"># install.packages(&quot;BGLR&quot;)</span>
 <span class="kw">library</span>(BGLR)
 out&lt;-<span class="st"> </span><span class="kw">read_ped</span>(<span class="st">&quot;../../STAT892/data/Genotypes/sativas413.ped&quot;</span>)
-p=out<span class="op">$</span>p
-n=out<span class="op">$</span>n
-out=out<span class="op">$</span>x
+p=out$p
+n=out$n
+out=out$x
 <span class="co">#Recode snp to 0,1,2 format using allele 1</span>
 <span class="co"># 0 --&gt; 0</span>
 <span class="co"># 1 --&gt; 1</span>
 <span class="co"># 2 --&gt; NA</span>
 <span class="co"># 3 --&gt; 2</span>
-out[out<span class="op">==</span><span class="dv">2</span>]=<span class="ot">NA</span>
-out[out<span class="op">==</span><span class="dv">3</span>]=<span class="dv">2</span>
+out[out==<span class="dv">2</span>]=<span class="ot">NA</span>
+out[out==<span class="dv">3</span>]=<span class="dv">2</span>
 W &lt;-<span class="st"> </span><span class="kw">matrix</span>(out, <span class="dt">nrow=</span>p, <span class="dt">ncol=</span>n, <span class="dt">byrow=</span><span class="ot">TRUE</span>)
 W &lt;-<span class="st"> </span><span class="kw">t</span>(W) 
 <span class="kw">dim</span>(W) <span class="co"># # 413 x 36901</span></code></pre></div>
@@ -154,20 +150,20 @@ W &lt;-<span class="st"> </span><span class="kw">t</span>(W)
 <div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="co"># accession ID</span>
 fam &lt;-<span class="kw">read.table</span>(<span class="st">&quot;../../STAT892/data/Genotypes/sativas413.fam&quot;</span>, <span class="dt">header =</span> <span class="ot">FALSE</span>, <span class="dt">stringsAsFactors =</span> <span class="ot">FALSE</span>)  
 <span class="kw">head</span>(fam)
-<span class="kw">rownames</span>(W) &lt;-<span class="st"> </span>fam<span class="op">$</span>V2 <span class="co"># 413 x 36901</span></code></pre></div>
+<span class="kw">rownames</span>(W) &lt;-<span class="st"> </span>fam$V2 <span class="co"># 413 x 36901</span></code></pre></div>
 </div>
 <div id="phenotype-data" class="section level2">
 <h2>Phenotype data</h2>
 <p>We will use the <code>read.table</code> function to read the phenotype file <code>RiceDiversity_44K_Phenotypes_34traits_PLINK.txt</code> from <a href="http://www.ricediversity.org/data/sets/44kgwas/RiceDiversity_44K_Phenotypes_34traits_PLINK.txt">here</a>.</p>
 <div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="co"># phenotypes</span>
 rice.pheno &lt;-<span class="st"> </span><span class="kw">read.table</span>(<span class="st">&quot;http://www.ricediversity.org/data/sets/44kgwas/RiceDiversity_44K_Phenotypes_34traits_PLINK.txt&quot;</span>, <span class="dt">header=</span><span class="ot">TRUE</span>, <span class="dt">stringsAsFactors =</span> <span class="ot">FALSE</span>, <span class="dt">sep =</span> <span class="st">&quot;</span><span class="ch">\t</span><span class="st">&quot;</span>)
-<span class="kw">table</span>(<span class="kw">rownames</span>(W) <span class="op">==</span><span class="st"> </span>rice.pheno<span class="op">$</span>NSFTVID)
-y &lt;-<span class="st"> </span><span class="kw">matrix</span>(rice.pheno<span class="op">$</span>Flowering.time.at.Arkansas) <span class="co"># # use the first trait </span>
-<span class="kw">rownames</span>(y) &lt;-<span class="st"> </span>rice.pheno<span class="op">$</span>NSFTVID
-index &lt;-<span class="st"> </span><span class="op">!</span><span class="kw">is.na</span>(y)
+<span class="kw">table</span>(<span class="kw">rownames</span>(W) ==<span class="st"> </span>rice.pheno$NSFTVID)
+y &lt;-<span class="st"> </span><span class="kw">matrix</span>(rice.pheno$Flowering.time.at.Arkansas) <span class="co"># # use the first trait </span>
+<span class="kw">rownames</span>(y) &lt;-<span class="st"> </span>rice.pheno$NSFTVID
+index &lt;-<span class="st"> </span>!<span class="kw">is.na</span>(y)
 y &lt;-<span class="st"> </span>y[index, <span class="dv">1</span>, drop=<span class="ot">FALSE</span>] <span class="co"># 374</span>
 W &lt;-<span class="st"> </span>W[index, ] <span class="co"># 374 x 36901</span>
-<span class="kw">table</span>(<span class="kw">rownames</span>(W) <span class="op">==</span><span class="st"> </span><span class="kw">rownames</span>(y))</code></pre></div>
+<span class="kw">table</span>(<span class="kw">rownames</span>(W) ==<span class="st"> </span><span class="kw">rownames</span>(y))</code></pre></div>
 </div>
 </div>
 <div id="population-structure" class="section level1">
@@ -175,19 +171,19 @@ W &lt;-<span class="st"> </span>W[index, ] <span class="co"># 374 x 36901</span>
 <p>This data set is known to exhibit a subpopulation structure as the panel contains indica, aus, temperate japonica, tropical japonica, aromatic, and highly admixed accessions. We will create a PC plot to visualize the extent of population structure in rice.</p>
 <div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="co"># PC plots</span>
 gp &lt;-<span class="kw">read.csv</span>(<span class="st">&quot;http://ricediversity.org/data/sets/44kgwas/RiceDiversity.44K.germplasm.csv&quot;</span>, <span class="dt">header =</span> <span class="ot">TRUE</span>, <span class="dt">skip =</span> <span class="dv">1</span>,  <span class="dt">stringsAsFactors =</span> <span class="ot">FALSE</span>)   <span class="co"># 431 x 12</span>
-gp2 &lt;-<span class="st"> </span>gp[<span class="kw">match</span>(<span class="kw">rownames</span>(y), gp<span class="op">$</span>NSFTV.ID), ]
-<span class="kw">table</span>(<span class="kw">rownames</span>(y) <span class="op">==</span><span class="st"> </span>gp2<span class="op">$</span>NSFTV.ID)
+gp2 &lt;-<span class="st"> </span>gp[<span class="kw">match</span>(<span class="kw">rownames</span>(y), gp$NSFTV.ID), ]
+<span class="kw">table</span>(<span class="kw">rownames</span>(y) ==<span class="st"> </span>gp2$NSFTV.ID)
 
     
-<span class="kw">plot</span>(gp2<span class="op">$</span>PC1, gp2<span class="op">$</span>PC2, <span class="dt">xlab=</span><span class="st">&quot;PC1&quot;</span>, <span class="dt">ylab=</span><span class="st">&quot;PC2&quot;</span>, <span class="dt">col=</span><span class="kw">c</span>(<span class="dv">1</span><span class="op">:</span><span class="dv">6</span>)[<span class="kw">factor</span>(gp2<span class="op">$</span>Sub.population)])
-<span class="kw">legend</span>(<span class="dt">x=</span><span class="st">&quot;topleft&quot;</span>, <span class="dt">legend =</span> <span class="kw">levels</span>(<span class="kw">factor</span>(gp2<span class="op">$</span>Sub.population)), <span class="dt">col=</span><span class="kw">c</span>(<span class="dv">1</span><span class="op">:</span><span class="dv">6</span>), <span class="dt">pch=</span><span class="dv">1</span>, <span class="dt">cex=</span><span class="fl">0.6</span>)</code></pre></div>
+<span class="kw">plot</span>(gp2$PC1, gp2$PC2, <span class="dt">xlab=</span><span class="st">&quot;PC1&quot;</span>, <span class="dt">ylab=</span><span class="st">&quot;PC2&quot;</span>, <span class="dt">col=</span><span class="kw">c</span>(<span class="dv">1</span>:<span class="dv">6</span>)[<span class="kw">factor</span>(gp2$Sub.population)])
+<span class="kw">legend</span>(<span class="dt">x=</span><span class="st">&quot;topleft&quot;</span>, <span class="dt">legend =</span> <span class="kw">levels</span>(<span class="kw">factor</span>(gp2$Sub.population)), <span class="dt">col=</span><span class="kw">c</span>(<span class="dv">1</span>:<span class="dv">6</span>), <span class="dt">pch=</span><span class="dv">1</span>, <span class="dt">cex=</span><span class="fl">0.6</span>)</code></pre></div>
 </div>
 <div id="quality-control" class="section level1">
 <h1>Quality control</h1>
 <div id="genotype-imputation" class="section level2">
 <h2>Genotype imputation</h2>
 <p>Replace missing marker genotypes with mean values. Then store the marker genotypes in a matrix object <code>W</code>.</p>
-<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="cf">for</span> (j <span class="cf">in</span> <span class="dv">1</span><span class="op">:</span><span class="kw">ncol</span>(W)){
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">for (j in <span class="dv">1</span>:<span class="kw">ncol</span>(W)){
   W[,j] &lt;-<span class="st"> </span><span class="kw">ifelse</span>(<span class="kw">is.na</span>(W[,j]), <span class="kw">mean</span>(W[,j], <span class="dt">na.rm=</span><span class="ot">TRUE</span>), W[,j])
 }</code></pre></div>
 </div>
@@ -203,15 +199,15 @@ f(A) = p = \frac{(\text{no. of } A \text{ allele in the population})}{2 \times \
 <p>How to repeat this operation for 3,6901 SNPs? The <code>colSums</code> function returns the sum of each column in a matrix as a vector.</p>
 <div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">colSums</span>(W) </code></pre></div>
 <p>Note that <code>colSums(W)</code> gives the numerator of the above equation. We then divide this number by <span class="math inline">\(2 \times \text{total no. of individuals}\)</span>. The function <code>nrows</code> returns the number of rows.</p>
-<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">p &lt;-<span class="st"> </span><span class="kw">colSums</span>(W) <span class="op">/</span><span class="st"> </span>(<span class="dv">2</span> <span class="op">*</span><span class="st"> </span><span class="kw">nrow</span>(W)) <span class="co"># or colMean(X) / 2</span></code></pre></div>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">p &lt;-<span class="st"> </span><span class="kw">colSums</span>(W) /<span class="st"> </span>(<span class="dv">2</span> *<span class="st"> </span><span class="kw">nrow</span>(W)) <span class="co"># or colMean(X) / 2</span></code></pre></div>
 <p>The variable <code>p</code> is a vector and it contains the allele frequencies of reference allele.</p>
 </div>
 <div id="minor-allele-frequency-maf" class="section level2">
 <h2>Minor allele frequency (MAF)</h2>
 <p>Perform a quality control analysis by removing markers with MAF &lt; 0.05. How many markers are removed? Save the filtered genotype matrix in <code>W2</code>.</p>
-<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">maf &lt;-<span class="st"> </span><span class="kw">ifelse</span>(p <span class="op">&gt;</span><span class="st"> </span><span class="fl">0.5</span>, <span class="dv">1</span><span class="op">-</span>p, p)
-maf.index &lt;-<span class="st"> </span><span class="kw">which</span>(maf <span class="op">&lt;</span><span class="st"> </span><span class="fl">0.05</span>)
-W2 &lt;-<span class="st"> </span>W[, <span class="op">-</span>maf.index]  <span class="co"># 374 x 33558 </span></code></pre></div>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">maf &lt;-<span class="st"> </span><span class="kw">ifelse</span>(p &gt;<span class="st"> </span><span class="fl">0.5</span>, <span class="dv">1</span>-p, p)
+maf.index &lt;-<span class="st"> </span><span class="kw">which</span>(maf &lt;<span class="st"> </span><span class="fl">0.05</span>)
+W2 &lt;-<span class="st"> </span>W[, -maf.index]  <span class="co"># 374 x 33558 </span></code></pre></div>
 </div>
 </div>
 <div id="genome-wide-association-studies" class="section level1">
@@ -220,12 +216,12 @@ W2 &lt;-<span class="st"> </span>W[, <span class="op">-</span>maf.index]  <span 
 <div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="co"># install.packages(&quot;rrBLUP&quot;)</span>
 <span class="kw">library</span>(rrBLUP)
 map &lt;-<span class="st"> </span><span class="kw">read.table</span>(<span class="st">&quot;../../STAT892/data/Genotypes/sativas413.map&quot;</span>, <span class="dt">header =</span> <span class="ot">FALSE</span>, <span class="dt">stringsAsFactors =</span> <span class="ot">FALSE</span>)
-my.geno &lt;-<span class="st"> </span><span class="kw">data.frame</span>(<span class="dt">marker=</span>map[,<span class="dv">2</span>], <span class="dt">chrom=</span>map[,<span class="dv">1</span>], <span class="dt">pos=</span>map[,<span class="dv">4</span>], <span class="kw">t</span>(W<span class="op">-</span><span class="dv">1</span>), <span class="dt">check.names =</span> <span class="ot">FALSE</span>) <span class="co"># W = \in{-1, 0, 1}</span>
+my.geno &lt;-<span class="st"> </span><span class="kw">data.frame</span>(<span class="dt">marker=</span>map[,<span class="dv">2</span>], <span class="dt">chrom=</span>map[,<span class="dv">1</span>], <span class="dt">pos=</span>map[,<span class="dv">4</span>], <span class="kw">t</span>(W<span class="dv">-1</span>), <span class="dt">check.names =</span> <span class="ot">FALSE</span>) <span class="co"># W = \in{-1, 0, 1}</span>
 my.pheno &lt;-<span class="st"> </span><span class="kw">data.frame</span>(<span class="dt">NSFTV_ID=</span><span class="kw">rownames</span>(y), <span class="dt">y=</span>y) 
 
 rel &lt;-<span class="st"> </span><span class="kw">GWAS</span>(my.pheno, my.geno, <span class="dt">min.MAF=</span><span class="fl">0.05</span>, <span class="dt">P3D=</span><span class="ot">TRUE</span>, <span class="dt">plot=</span><span class="ot">FALSE</span>)
-<span class="kw">head</span>(rel<span class="op">$</span>y)
-<span class="kw">tail</span>(rel<span class="op">$</span>y)</code></pre></div>
+<span class="kw">head</span>(rel$y)
+<span class="kw">tail</span>(rel$y)</code></pre></div>
 <div id="manhattan-plot" class="section level2">
 <h2>Manhattan plot</h2>
 <div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="co"># install.packages(&quot;qqman&quot;)</span>
