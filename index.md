@@ -4,5 +4,5 @@
 # J. Yang Lab Tutorial/workshop page
 
 
-- Tutorial 1: bash, github, and HCC [WWW](http://jyanglab.com/JYang-Lab-tutorial/day1/lab1.html)
+- Tutorial 1: bash, github, and HCC [WWW](http://jyanglab.com/JYang-Lab-tutorial/profiling/day1/lab1.html)
 
