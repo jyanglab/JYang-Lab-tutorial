@@ -12,8 +12,21 @@
 
 -------------------
 
-# Summer 2019
+# Summer Computational Genomics Workshop 2019
 
 ## 05-17-2019: R programming basics
 - Led by Zhikai
 - Online material to read: [R Tuorial from Quick-R](https://www.statmethods.net/r-tutorial/index.html)
+
+## 05-24-2019: Setup Github and interact with HCC
+- Led by Jinliang
+- HCC usage [WWW](http://jyanglab.com/JYang-Lab-tutorial/profiling/day1/lab1.html)
+- [Lab]()
+- [Assignment]()
+
+## 05-31-2019: Data Science using R
+- Led by ...
+- Online material: [EdX R Basics](https://courses.edx.org/courses/course-v1:HarvardX+PH125.1x+1T2019a/course/)
+
+# 06-07-2019: R plotting and ggplot2
+- Led by 
