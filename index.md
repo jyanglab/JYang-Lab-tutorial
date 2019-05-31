@@ -17,7 +17,7 @@
 ## 05-17-2019: R programming basics
 - Led by Zhikai
 - Online material to read: [R Tuorial from Quick-R](https://www.statmethods.net/r-tutorial/index.html)
-- [Lab]()
+- Online material: [EdX R Basics](https://courses.edx.org/courses/course-v1:HarvardX+PH125.1x+1T2019a/course/)
 
 ## 05-24-2019: Setup Github
 - Led by Jinliang and Zhikai
@@ -31,9 +31,18 @@
 
 ----
 
-## 06-07-2019: Data Science using R
-- Led by ...
-- Online material: [EdX R Basics](https://courses.edx.org/courses/course-v1:HarvardX+PH125.1x+1T2019a/course/)
+## 06-07-2019: Data Science using R package `data.table`
+- Led by Gen
+- R data.table [wiki](https://github.com/Rdatatable/data.table/wiki)
 
-# 06-14-2019: R plotting and ggplot2
-- Led by 
+## 06-14-2019: R plotting and ggplot2
+- Led by ...
+- [ggplot2](https://github.com/rstudio/cheatsheets/blob/master/data-visualization-2.1.pdf)
+
+## 06-20-2019: R plotting and ggplot2
+
+
+
+
+
+
