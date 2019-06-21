@@ -43,14 +43,14 @@
 - [Data Visualization with ggplot2](https://datacarpentry.org/R-ecology-lesson/04-visualization-ggplot2.html#customization)
 - [Top 50 ggplot2 Visualizations](http://r-statistics.co/Top50-Ggplot2-Visualizations-MasterList-R-Code.html)
 
-## 06-28-2019: R for plant phenotyping image data processing 
-- Lead by Eric and Jinliang
+## 06-28-2019: R for plant phenotyping image data processing and machine learning
+- Lead by Jinliang
 - [imager](https://dahtah.github.io/imager/)
+- [Keras](https://keras.rstudio.com/)
 
-## 07-05-2019: Machine learning using Keras
+## 07-05-2019: Use Github to host a personal website
 - Lead by Jinliang
 
-## 07-12-2019: Use Github to host a personal website
 
 
 
