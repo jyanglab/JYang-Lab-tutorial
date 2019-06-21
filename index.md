@@ -39,8 +39,9 @@
 
 ## 06-21-2019: R plotting and ggplot2 for phenotypic data analysis
 - Led by Jinliang
-- [ggplot2](https://github.com/rstudio/cheatsheets/blob/master/data-visualization-2.1.pdf)
-- [Data Visualization Cheat Sheet](https://www.rstudio.com/resources/cheatsheets/)
+- [ggplot2 Cheat Sheet](https://github.com/rstudio/cheatsheets/blob/master/data-visualization-2.1.pdf)
+- [Data Visualization with ggplot2](https://datacarpentry.org/R-ecology-lesson/04-visualization-ggplot2.html#customization)
+- [Top 50 ggplot2 Visualizations](http://r-statistics.co/Top50-Ggplot2-Visualizations-MasterList-R-Code.html)
 
 ## 06-28-2019: R for plant phenotyping image data processing 
 - Led by Eric and Jinliang
