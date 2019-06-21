@@ -31,15 +31,26 @@
 
 ----
 
-## 06-07-2019: Data Science using R package `data.table`
+## 06-07-2019: Planting, no meeting
+
+## 06-14-2019: Data Science using R package `data.table`
 - Led by Gen
 - R data.table [wiki](https://github.com/Rdatatable/data.table/wiki)
 
-## 06-14-2019: R plotting and ggplot2
-- Led by ...
+## 06-21-2019: R plotting and ggplot2 for phenotypic data analysis
+- Led by Jinliang
 - [ggplot2](https://github.com/rstudio/cheatsheets/blob/master/data-visualization-2.1.pdf)
+- [Data Visualization Cheat Sheet](https://www.rstudio.com/resources/cheatsheets/)
 
-## 06-20-2019: R plotting and ggplot2
+## 06-28-2019: R for plant phenotyping image data processing 
+- Led by Eric and Jinliang
+- [imager](https://dahtah.github.io/imager/)
+
+## 07-05-2019: Machine learning using Keras
+- Led by Jinliang
+
+## 07-12-2019: Use Github to host a personal website
+
 
 
 
