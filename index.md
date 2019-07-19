@@ -53,8 +53,16 @@
 
 ## 07-19-2019: Interactive plots and GWAS results visualization 
 
+- [Manhattan plot in R](https://www.r-graph-gallery.com/wp-content/uploads/2018/02/Manhattan_plot_in_R.html)
+- Learn about [shiny apps](https://shiny.rstudio.com/) and how to visualize results using it
 
-## 07-26-2019: Use Github to host a personal website
+## Peak pollination season.
+
+- NO MEETINGS
+- We will come back later
+
+
+## Use Github to host a personal website
 - Lead by Jinliang
 
 
